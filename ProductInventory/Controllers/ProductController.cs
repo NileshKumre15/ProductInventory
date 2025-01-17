@@ -10,9 +10,11 @@ using System.Web.Http;
 
 namespace ProductInventory.Controllers
 {
+    //[Authorize]
     public class ProductController : ApiController
     {
         private readonly ProductService _productService;
+        private const string AdminToken = "secure_token";
 
         public ProductController()
         {
